@@ -1,0 +1,27 @@
+# Volume Up
+"vol-u"
+    XF86AudioRaiseVolume
+
+# Volume Down
+"vol-d"
+    XF86AudioLowerVolume
+
+# Volume Mute
+"vol-m"
+    XF86AudioMute
+
+# Brightness Down
+"xbacklight -dec 10"
+    Control+Alt+Mod4 + comma
+
+# Brightness Up
+"xbacklight -inc 10"
+    Control+Alt+Mod4 + period
+
+# Capture screen
+"scrot ~/Shots/%Y-%m-%d_\$wx\$h.png"
+    Control+Alt+Mod4 + z
+
+# Capture selection
+"sleep 0.2 ; scrot -s ~/Shots/%Y-%m-%d_\$wx\$h.png"
+    Control+Shift+Alt+Mod4 + z
