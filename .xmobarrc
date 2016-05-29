@@ -1,0 +1,26 @@
+Config {
+
+      font = "xft:Fira Mono:size=9"
+    , bgColor = "#263238"
+    , fgColor = "#CFD8DC"
+    , position = BottomSize C 40 25
+
+    , sepChar =  "%"   -- delineator between plugin names and straight text
+    , alignSep = "}{"  -- separator between left-right alignment
+    , template = " %date%}%desk%{%battery% "
+
+    , lowerOnStart =     True    -- send to bottom of window stack on start
+    , hideOnStart =      False   -- start with window unmapped (hidden)
+    , allDesktops =      True    -- show on all desktops
+    , overrideRedirect = True    -- set the Override Redirect flag (Xlib)
+    , pickBroadest =     False   -- choose widest display (multi-monitor)
+    , persistent =       True    -- enable/disable hiding (True = disabled)
+
+    , commands =
+
+    [ Run Com "bar-date" [] "date" 600
+    , Run Com "desktop-indicator" [] "desk" 1
+    , Run Battery ["--template" , "<left>% battery"] 50
+    ]
+
+}

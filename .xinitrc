@@ -13,6 +13,7 @@ fi
 
 xbindkeys
 2bwm &
+xmobar &
 
 slow-trackball
 flux

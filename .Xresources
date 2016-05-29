@@ -1,11 +1,8 @@
 Xft.dpi: 192
 URxvt.font: xft:Fira Mono:size=8
 URxvt.letterSpace: -1
-URxvt.scrollstyle: plain
-URxvt.scrollbar: False
+URxvt.scrollBar: False
 URxvt.cursorBlink: True
-URxvt.scrollBar_floating: true
-URxvt.scrollBar_right: true
 URxvt.internalBorder: 20
 
 URxvt.foreground:   #CFD8DC
