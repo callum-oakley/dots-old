@@ -21,7 +21,7 @@ static const uint8_t offsets[] = {40,40,80,80};
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#ECEFF1","#607D8B","#FFF176","#64B5F6","#81C784","#263238","#212121"};
+static const char *colors[] = {"#ECEFF1","#607D8B","#FFF176","#64B5F6","#81C784","#57877B","#212121"};
 /* if this is set to true the inner border and outer borders colors will be
  swapped */
 static const bool inverted_colors = false;
@@ -35,7 +35,7 @@ static const bool inverted_colors = false;
 /*0) Outer border size. If you put this negative it will be a square.
  *1) Full borderwidth    2) Magnet border size
  *3) Resize border size  */
-static const uint8_t borders[] = {8,10,10,10};
+static const uint8_t borders[] = {4,4,1,1};
 /* Windows that won't have a border.*/
 #define LOOK_INTO "WM_NAME"
 static const char *ignore_names[] = {"bar", "xclock"};
@@ -44,6 +44,7 @@ static const char *rofirun[]   = { "rofirun", NULL };
 static const char *rofiwindow[]   = { "rofiwindow", NULL };
 static const char *terminal[]  = { "urxvt", NULL };
 static const char *lock[]  = { "lock", NULL };
+static const char *locksuspend[]  = { "lock-and-suspend", NULL };
 ///--Custom foo---///
 static void halfandcentered(const Arg *arg)
 {
@@ -160,20 +161,21 @@ static key keys[] = {
     {  MOD ,              XK_o,          start,             {.com=rofirun}},
     {  MOD ,              XK_slash,      start,             {.com=rofiwindow}},
     {  MOD ,              XK_minus,      start,             {.com=lock}},
+    {  MOD ,              XK_apostrophe, start,             {.com=locksuspend}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_x,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
     // Change current workspace
-       DESKTOPCHANGE(     XK_q,                             0)
-       DESKTOPCHANGE(     XK_w,                             1)
-       DESKTOPCHANGE(     XK_f,                             2)
-       DESKTOPCHANGE(     XK_p,                             3)
-       DESKTOPCHANGE(     XK_g,                             4)
-       DESKTOPCHANGE(     XK_j,                             5)
-       DESKTOPCHANGE(     XK_l,                             6)
-       DESKTOPCHANGE(     XK_u,                             7)
-	   DESKTOPCHANGE(     XK_semicolon,                     9)
-       DESKTOPCHANGE(     XK_y,                             8)
+       DESKTOPCHANGE(     XK_q,                             1)
+       DESKTOPCHANGE(     XK_w,                             2)
+       DESKTOPCHANGE(     XK_f,                             3)
+       DESKTOPCHANGE(     XK_p,                             4)
+       DESKTOPCHANGE(     XK_g,                             5)
+       DESKTOPCHANGE(     XK_j,                             6)
+       DESKTOPCHANGE(     XK_l,                             7)
+       DESKTOPCHANGE(     XK_u,                             8)
+       DESKTOPCHANGE(     XK_y,                             9)
+       DESKTOPCHANGE(     XK_semicolon,                     0)
 };
 static Button buttons[] = {
     {  MOD        ,XCB_BUTTON_INDEX_1,     mousemotion,   {.i=TWOBWM_MOVE}},
