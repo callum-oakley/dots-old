@@ -1,4 +1,4 @@
-/*  Dylan's Firefox css */
+/*  Modified from Dylan's Firefox css */
 
 @namespace html url(http://www.w3.org/1999/xhtml);
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
@@ -23,7 +23,7 @@
 
     /* Url Bar */
     --url-height: 40px;
-    --url-fonts: 'Fira Sans';
+    --url-fonts: 'Fira Mono';
     --url-font-size: 10px;
     --url-text-align: left;
 
@@ -194,5 +194,10 @@
     }
 
 /* }}} */
+
+    statuspanel {
+        font-family: var(--url-fonts) !important;
+        font-size: var(--url-font-size) !important;
+    }
 
 }

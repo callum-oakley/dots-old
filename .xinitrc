@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xsetroot -solid '#57877B'
+hsetroot -solid '#57877B'
 
 IN="eDP1"
 EXT="HDMI2"
@@ -14,6 +14,7 @@ fi
 xbindkeys
 2bwm &
 xmobar &
+compton -I 1 -O 1 &
 
 slow-trackball
 flux

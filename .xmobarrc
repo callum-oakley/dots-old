@@ -1,8 +1,8 @@
 Config {
 
       font = "xft:Fira Mono:size=9"
-    , bgColor = "#263238"
-    , fgColor = "#CFD8DC"
+    , bgColor = "#57877B"
+    , fgColor = "#ECEFF1"
     , position = BottomSize C 40 25
 
     , sepChar =  "%"   -- delineator between plugin names and straight text
